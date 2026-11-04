@@ -1,0 +1,1384 @@
+{
+ "version": 1,
+ "site": "https://www.altstaufnereinkehr.de/",
+ "title": "Altstaufner Einkehr",
+ "assistantName": "Demo-Assistent",
+ "launcherLabel": "Fragen an die Stube?",
+ "avatar": "img/logo.png",
+ "placeholder": "z. B. Wann haben Sie geöffnet?",
+ "demoNote": "Demo-Assistent · antwortet nur mit Inhalten dieser Website · sendet nichts",
+ "theme": {
+  "accent": "#1f3227",
+  "accent-d": "#142019",
+  "ink": "#1e1813",
+  "paper": "#f6eddb",
+  "gold": "#d9a48f",
+  "font": "Schibsted, system-ui, sans-serif",
+  "serif": "Fell, Georgia, serif"
+ },
+ "greeting": "Grüß Gott! Ich bin der Demo-Assistent der Altstaufner Einkehr. Ich beantworte Fragen zu Öffnungszeiten, Reservierung, Speisekarte und Anfahrt.\n\n{{status}}",
+ "chips": [
+  {
+   "label": "Öffnungszeiten"
+  },
+  {
+   "label": "Reservieren"
+  },
+  {
+   "label": "Speisekarte"
+  },
+  {
+   "label": "Anfahrt"
+  }
+ ],
+ "openingHours": {
+  "timeZone": "Europe/Berlin",
+  "days": {
+   "2": [
+    17,
+    24
+   ],
+   "3": [
+    17,
+    24
+   ],
+   "4": [
+    17,
+    24
+   ],
+   "5": [
+    17,
+    24
+   ],
+   "6": [
+    17,
+    24
+   ]
+  },
+  "texts": {
+   "openNow": "Gerade haben wir **geöffnet** (Di–Sa 17–24 Uhr).",
+   "laterToday": "Heute haben wir **ab 17 Uhr** geöffnet.",
+   "closedNow": "Für heute haben wir bereits geschlossen. Dienstag bis Samstag sind wir ab 17 Uhr für Sie da.",
+   "closedDay": "Heute ist **Ruhetag** (Sonntag und Montag). Dienstag bis Samstag sind wir ab 17 Uhr für Sie da."
+  }
+ },
+ "stopwords": [
+  "haben",
+  "habt",
+  "gibt",
+  "gibts",
+  "ihre",
+  "ihr",
+  "euch",
+  "eure",
+  "eine",
+  "einen",
+  "einem",
+  "einer",
+  "auch",
+  "kann",
+  "koennen",
+  "kostet",
+  "kosten",
+  "preis",
+  "preise",
+  "wieviel",
+  "viel",
+  "welche",
+  "welcher",
+  "welches",
+  "bitte",
+  "danke",
+  "hallo",
+  "heute",
+  "morgen",
+  "abend",
+  "noch",
+  "dass",
+  "wann",
+  "wie",
+  "was",
+  "mit",
+  "ohne",
+  "fuer",
+  "eine",
+  "sind",
+  "seid",
+  "wird",
+  "werden",
+  "mich",
+  "mir",
+  "uns",
+  "unser",
+  "ihnen",
+  "dies",
+  "diese",
+  "dieser",
+  "karte",
+  "speisekarte",
+  "essen",
+  "trinken",
+  "fleisch",
+  "woher",
+  "kommt",
+  "bekommen",
+  "bestellen",
+  "moechte",
+  "moechten",
+  "hätte",
+  "haette",
+  "gerne",
+  "gern",
+  "allgaeuer",
+  "einkehr",
+  "landzunge",
+  "hausgemachte",
+  "hausgemachter",
+  "hausgemachten",
+  "frischen",
+  "frische",
+  "regionale",
+  "region",
+  "aus",
+  "vom",
+  "von",
+  "der",
+  "die",
+  "das",
+  "und",
+  "oder",
+  "frage"
+ ],
+ "intents": [
+  {
+   "id": "greet",
+   "keywords": [
+    "hallo",
+    "servus",
+    "gruess gott",
+    "guten tag",
+    "guten abend",
+    "moin"
+   ],
+   "answer": "Grüß Gott! Wie kann ich helfen? Fragen Sie mich gerne nach Öffnungszeiten, Reservierung, Speisekarte oder Anfahrt.",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "thanks",
+   "keywords": [
+    "danke",
+    "vielen dank",
+    "merci",
+    "super",
+    "perfekt"
+   ],
+   "answer": "Gern geschehen! Wir freuen uns auf Ihren Besuch in der Altstaufner Einkehr.",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "hours",
+   "weight": 2,
+   "keywords": [
+    "oeffnungszeit",
+    "geoeffnet",
+    "offen",
+    "aufhaben",
+    "hat ihr auf",
+    "habt ihr auf",
+    "wann",
+    "uhrzeit",
+    "bis wann",
+    "ab wann",
+    "schliessen",
+    "schliesst",
+    "geschlossen",
+    "dienstag",
+    "mittwoch",
+    "donnerstag",
+    "freitag",
+    "samstag",
+    "wochenende",
+    "abends",
+    "mittag",
+    "mittags",
+    "mittagessen"
+   ],
+   "answer": "**Öffnungszeiten**\nDienstag – Samstag: 17 – 24 Uhr\nSonntag & Montag: Ruhetag\n\n{{status}}",
+   "links": [
+    {
+     "label": "Zum Reservierungsformular",
+     "href": "#reservieren"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "ruhetag",
+   "weight": 3,
+   "keywords": [
+    "ruhetag",
+    "sonntag",
+    "montag",
+    "feiertag"
+   ],
+   "answer": "Sonntag und Montag ist bei uns **Ruhetag**. Dienstag bis Samstag haben wir ab 17 Uhr geöffnet (bis 24 Uhr).\n\nZu Feiertagen oder Betriebsferien steht auf der Website nichts – das erfahren Sie am besten telefonisch unter 08386 7193 (ab 15 Uhr).",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "reserve",
+   "weight": 3,
+   "keywords": [
+    "reserv",
+    "tisch",
+    "platz",
+    "buchen",
+    "personen",
+    "gruppe",
+    "gesellschaft",
+    "feier",
+    "geburtstag",
+    "runde",
+    "anmelden",
+    "freihalten"
+   ],
+   "answer": "Wenn Sie in geselliger Runde bei uns einkehren möchten, empfehlen wir, vorab zu reservieren.\n\nReservierungen nehmen wir **telefonisch ab 15 Uhr unter 08386 7193** entgegen. In dieser Demo-Website gibt es außerdem ein Formular für Reservierungsanfragen (Demo – es wird nichts gesendet).",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    },
+    {
+     "label": "Zum Reservierungsformular",
+     "href": "#reservieren"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Speisekarte"
+    }
+   ]
+  },
+  {
+   "id": "phone",
+   "weight": 2,
+   "keywords": [
+    "telefon",
+    "anrufen",
+    "nummer",
+    "erreichen",
+    "kontakt",
+    "fax",
+    "email",
+    "e mail",
+    "mail"
+   ],
+   "answer": "**Kontakt**\nTel.: 08386 7193 (Reservierungen ab 15 Uhr)\nFax: 08386 7639\n\nEine E-Mail-Adresse ist auf der Website nicht angegeben.",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "address",
+   "weight": 3,
+   "keywords": [
+    "adresse",
+    "anfahrt",
+    "wo seid",
+    "wo sind",
+    "wo liegt",
+    "wo ist",
+    "wo befind",
+    "wie komme",
+    "hinkommen",
+    "anreise",
+    "finden",
+    "lage",
+    "weg",
+    "route",
+    "bahnhof",
+    "zug",
+    "bahn",
+    "park",
+    "auto",
+    "navi",
+    "strasse",
+    "fussgaengerzone",
+    "zentrum",
+    "ortskern"
+   ],
+   "answer": "**So finden Sie zu uns**\nRestaurant Altstaufner Einkehr\nBahnhofstraße 4, 87534 Oberstaufen\n\nWir liegen im ruhigen Ortskern Oberstaufens, günstig in der **Fußgängerzone, unweit des Bahnhofs**.\n\nZu Parkmöglichkeiten steht auf der Website nichts – fragen Sie gerne telefonisch nach.",
+   "links": [
+    {
+     "label": "Route (OpenStreetMap)",
+     "href": "https://www.openstreetmap.org/?mlat=47.5543009&mlon=10.0238316#map=18/47.5543009/10.0238316"
+    },
+    {
+     "label": "Anfahrt auf der Seite",
+     "href": "#anfahrt"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    }
+   ]
+  },
+  {
+   "id": "menu",
+   "weight": 1.5,
+   "keywords": [
+    "speisekarte",
+    "karte",
+    "menue",
+    "menu",
+    "essen",
+    "gerichte",
+    "speisen",
+    "kueche",
+    "hunger"
+   ],
+   "answer": "Unsere Karte reicht von Allgäuer Schmankerln und Brotzeiten über hausgemachte Nudeln, Grill, Wild und Fisch bis zu Desserts – dazu die saisonale Aktion „Wald und Wiesen“. Welcher Bereich interessiert Sie?",
+   "links": [
+    {
+     "label": "Zur Speisekarte",
+     "href": "#karte"
+    }
+   ],
+   "showSections": true
+  },
+  {
+   "id": "veggie",
+   "weight": 4,
+   "keywords": [
+    "vegetar",
+    "vegan",
+    "ohne fleisch",
+    "fleischlos",
+    "veggie"
+   ],
+   "answer": "Auf unserer Karte sind keine Gerichte als vegetarisch oder vegan gekennzeichnet. Ohne Fleisch oder Fisch in der Beschreibung stehen zum Beispiel:\n• Gerollte Nudeln mit gegrilltem Gemüse, frischen Oliven, Sprinz und pürierten Tomaten **20,90 €**\n• Einkehr Käsbrotzeit – Bergkäs, Obatzda, Ziegenkäse und Romadur **23,50 €**\n• Obatzda – angemachter Käse **9,80 €**\n• Pikanter Bergkässalat **14,50 €**\n• Gemischter Salat **7,80 €**\n\nOb ein Gericht komplett vegetarisch zubereitet wird, erfragen Sie bitte telefonisch unter 08386 7193.",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    },
+    {
+     "label": "Zur Speisekarte",
+     "href": "#karte"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "allergy",
+   "weight": 4,
+   "keywords": [
+    "allerg",
+    "gluten",
+    "laktose",
+    "unvertraeglich",
+    "zusatzstoff",
+    "nuss"
+   ],
+   "answer": "Zu Allergenen und Unverträglichkeiten stehen auf der Website keine Angaben. Bitte sprechen Sie uns direkt an – telefonisch unter 08386 7193 (ab 15 Uhr) oder vor Ort.",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "wine",
+   "weight": 2,
+   "keywords": [
+    "wein",
+    "weine",
+    "weinkarte",
+    "riesling",
+    "burgunder",
+    "flasche"
+   ],
+   "answer": "Unsere erlesene Weinauswahl umfasst edle Tropfen aus Deutschland und dem benachbarten Ausland – offene Weine (0,2 l) ab 7,20 € und Flaschenweine. Was darf es sein?",
+   "links": [
+    {
+     "label": "Zur Speisekarte",
+     "href": "#karte"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Weißwein offen",
+     "ask": "Offene Weine weiß · 0,2 l"
+    },
+    {
+     "label": "Rotwein offen",
+     "ask": "Offene Weine rot · 0,2 l"
+    },
+    {
+     "label": "Rosé",
+     "ask": "Offene Weine rosé · 0,2 l"
+    },
+    {
+     "label": "Flasche weiß DE",
+     "ask": "Deutsche Flaschenweine weiß"
+    },
+    {
+     "label": "Flasche weiß Ausland",
+     "ask": "Ausländische Flaschenweine weiß"
+    },
+    {
+     "label": "Flasche rot",
+     "ask": "Flaschenweine rot"
+    }
+   ]
+  },
+  {
+   "id": "beer",
+   "weight": 3,
+   "keywords": [
+    "bier",
+    "fass",
+    "zapf",
+    "helles",
+    "weizen"
+   ],
+   "answer": "Das Bier kommt bei uns **aus dem Fass**. Welche Sorten wir ausschenken, steht nicht auf der Website – fragen Sie gerne vor Ort oder telefonisch nach.",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "garden",
+   "weight": 3,
+   "keywords": [
+    "biergarten",
+    "draussen",
+    "terrasse",
+    "garten",
+    "sommer",
+    "aussen"
+   ],
+   "answer": "Im Sommer finden Sie außerdem Platz in unserem **baumbestandenen Biergarten**.",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    }
+   ]
+  },
+  {
+   "id": "region",
+   "weight": 3,
+   "keywords": [
+    "regional",
+    "region",
+    "bio",
+    "landzunge",
+    "herkunft",
+    "woher",
+    "bauern",
+    "metzger",
+    "schlachter",
+    "kaese",
+    "nachhaltig",
+    "saisonal"
+   ],
+   "answer": "Unsere Heimat liegt uns am Herzen: Wir sind Mitglied der Vereinigung **„Landzunge“** zur Förderung qualitätsorientierter Gastronomie im Allgäu. Wir verwenden Bio-Produkte aus der Region – unser Rind-, Schweine- und Lammfleisch stammt von Schlachtern aus dem Umland, Berg- und Schafskäse von Allgäuer Bauern. Die Tagesangebote passen wir stets der Saison an.",
+   "chips": [
+    {
+     "label": "Saisonales",
+     "ask": "Wald und Wiese – Saisonales"
+    },
+    {
+     "label": "Speisekarte"
+    }
+   ]
+  },
+  {
+   "id": "about",
+   "weight": 2,
+   "keywords": [
+    "geschichte",
+    "tradition",
+    "denkmal",
+    "haus",
+    "inhaber",
+    "besitzer",
+    "chef",
+    "familie",
+    "schmid",
+    "wer seid",
+    "ueber euch",
+    "ueber sie"
+   ],
+   "answer": "Die Altstaufner Einkehr ist eines der traditionsreichsten Restaurants im Allgäu. In unserem **denkmalgeschützten Haus** verbinden sich urtümliche Küche mit modernem Qualitätsanspruch und Allgäuer Gemütlichkeit. Inhaber: **Fam. Michael Schmid**.",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "payment",
+   "weight": 3,
+   "keywords": [
+    "karte zahlen",
+    "kartenzahlung",
+    "ec karte",
+    "kreditkarte",
+    "barzahlung",
+    "bezahlen",
+    "zahlung",
+    "paypal"
+   ],
+   "answer": "Zu Zahlungsmöglichkeiten steht auf der Website nichts. Bitte fragen Sie telefonisch unter 08386 7193 nach.",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  },
+  {
+   "id": "dogs",
+   "weight": 3,
+   "keywords": [
+    "hund",
+    "haustier",
+    "kinder",
+    "kinderstuhl",
+    "barrierefrei",
+    "rollstuhl",
+    "wlan",
+    "gutschein"
+   ],
+   "answer": "Dazu habe ich leider keine Angaben auf der Website. Am besten fragen Sie direkt nach: 08386 7193 (ab 15 Uhr).",
+   "links": [
+    {
+     "label": "08386 7193 anrufen",
+     "href": "tel:+4983867193"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Reservieren"
+    },
+    {
+     "label": "Speisekarte"
+    },
+    {
+     "label": "Anfahrt"
+    }
+   ]
+  }
+ ],
+ "menu": {
+  "foundPrefix": "Das habe ich auf unserer Karte gefunden:",
+  "links": [
+   {
+    "label": "Zur Speisekarte",
+    "href": "#karte"
+   }
+  ],
+  "followChips": [
+   {
+    "label": "Speisekarte"
+   },
+   {
+    "label": "Reservieren"
+   },
+   {
+    "label": "Öffnungszeiten"
+   }
+  ],
+  "sections": [
+   {
+    "title": "Wald und Wiese – Saisonales",
+    "short": "Saisonal",
+    "keywords": [
+     "saison",
+     "wald und wiese",
+     "wald",
+     "wiese",
+     "herbst",
+     "tageskarte",
+     "aktion",
+     "sonderaktion",
+     "special",
+     "wochenkarte"
+    ],
+    "items": [
+     {
+      "name": "Rote Beete / Senfkaviar / Ziegenfrischkäse / Pilzerde",
+      "desc": "",
+      "price": "14,50 €"
+     },
+     {
+      "name": "Consommé vom Reh / Reh-Maultasche",
+      "desc": "",
+      "price": "10,90 €"
+     },
+     {
+      "name": "Geräucherter Saibling / schwarzer Rettich / Sanddorn / gepickelte Edelpilze",
+      "desc": "",
+      "price": "14,90 €"
+     },
+     {
+      "name": "Wildschweinrücken / Weißkraut / Apfel-Ingwer / Schnittlauch / Sauerrahmknödel",
+      "desc": "",
+      "price": "32,80 €"
+     },
+     {
+      "name": "Rinderfilet / Kräutermoos / Steinpilze / Brombeer-Risotto / Madeiraglace",
+      "desc": "",
+      "price": "38,90 €"
+     },
+     {
+      "name": "Hirschrücken / geräucherter Sellerie / Edelpilze / schwarze Nüsse / Waldkräuteröl",
+      "desc": "",
+      "price": "37,50 €"
+     }
+    ]
+   },
+   {
+    "title": "Vorspeisen – Einkehr Schmankerl",
+    "short": "Vorspeisen",
+    "keywords": [
+     "vorspeise",
+     "salat",
+     "schmankerl",
+     "obatzda",
+     "wurstsalat",
+     "vorweg"
+    ],
+    "items": [
+     {
+      "name": "Gemischter Salat",
+      "desc": "",
+      "price": "7,80 €"
+     },
+     {
+      "name": "Großer gemischter Salat",
+      "desc": "",
+      "price": "16,50 €"
+     },
+     {
+      "name": "Sülze vom Tafelspitz",
+      "desc": "mit Gemüsevinaigrette und Bratkartoffel",
+      "price": "23,50 €"
+     },
+     {
+      "name": "Obatzda – angemachter Käse",
+      "desc": "",
+      "price": "9,80 €"
+     },
+     {
+      "name": "Einkehr Radibrotzeit mit Schnittlauchbrot",
+      "desc": "",
+      "price": "9,50 €"
+     },
+     {
+      "name": "Landzunge – Wurstsalat",
+      "desc": "",
+      "price": "13,50 €"
+     },
+     {
+      "name": "Landzunge – Schweizer Wurstsalat",
+      "desc": "",
+      "price": "13,90 €"
+     },
+     {
+      "name": "Pikanter Bergkässalat",
+      "desc": "",
+      "price": "14,50 €"
+     },
+     {
+      "name": "An saure Käs",
+      "desc": "angemachter Allgäuer Romadur mit gehobeltem Bergkäse",
+      "price": "13,90 €"
+     }
+    ]
+   },
+   {
+    "title": "Suppen",
+    "short": "Suppen",
+    "keywords": [
+     "suppe",
+     "bruehe",
+     "flaedle"
+    ],
+    "items": [
+     {
+      "name": "Klare Rinderbrühe mit Leber- und Brätknödel",
+      "desc": "",
+      "price": "7,90 €"
+     },
+     {
+      "name": "Flädlesuppe",
+      "desc": "",
+      "price": "6,90 €"
+     }
+    ]
+   },
+   {
+    "title": "Ebbas Bsonders",
+    "short": "Brotzeit",
+    "keywords": [
+     "brotzeit",
+     "ebbas",
+     "bsonders",
+     "schinken",
+     "tatar",
+     "kaesbrotzeit",
+     "vesper"
+    ],
+    "items": [
+     {
+      "name": "Pikant angemachtes Tatar vom Allgäuer Bio-Rind",
+      "desc": "",
+      "price": "19,90 €"
+     },
+     {
+      "name": "Allgäuer Hirschschinken",
+      "desc": "",
+      "price": "23,50 €"
+     },
+     {
+      "name": "Luftgetrocknetes Bündnerfleisch",
+      "desc": "",
+      "price": "23,50 €"
+     },
+     {
+      "name": "Jennerweinbrett",
+      "desc": "Hirschschinken, Hirschsalami und Bündnerfleisch",
+      "price": "23,50 €"
+     },
+     {
+      "name": "Einkehr Käsbrotzeit",
+      "desc": "Bergkäs, Obatzda, Ziegenkäse und Romadur aus der Region",
+      "price": "23,50 €"
+     }
+    ]
+   },
+   {
+    "title": "Hausgemachte Nudeln",
+    "short": "Nudeln",
+    "keywords": [
+     "nudel",
+     "pasta"
+    ],
+    "items": [
+     {
+      "name": "Gerollte Nudeln",
+      "desc": "mit gegrilltem Gemüse, frischen Oliven, Sprinz und pürierten Tomaten",
+      "price": "20,90 €"
+     },
+     {
+      "name": "Scharfe Nudeln",
+      "desc": "mit Meerwassergarnelen und Gemüse",
+      "price": "26,50 €"
+     }
+    ]
+   },
+   {
+    "title": "Aus der Brühe",
+    "short": "Maultaschen",
+    "keywords": [
+     "maultasche"
+    ],
+    "items": [
+     {
+      "name": "Maultaschen",
+      "desc": "mit Zwiebelschmelze und Salatteller",
+      "price": "21,90 €"
+     }
+    ]
+   },
+   {
+    "title": "Vom Grill",
+    "short": "Grill",
+    "keywords": [
+     "grill",
+     "steak",
+     "rumpsteak",
+     "rostbraten",
+     "schwein"
+    ],
+    "items": [
+     {
+      "name": "200 g Schweinemedaillons",
+      "desc": "mit hausgemachter Knoblauchbutter",
+      "price": "20,90 €"
+     },
+     {
+      "name": "250 g Grillfleisch vom Bio-Landschwein",
+      "desc": "mit Meerrettich und Bauernbrot",
+      "price": "20,50 €"
+     },
+     {
+      "name": "180 g Zwiebelrostbraten vom Allgäuer PrimaRind",
+      "desc": "mit Fleischsaft",
+      "price": "28,90 €"
+     },
+     {
+      "name": "220 g Rumpsteak vom Allgäuer Weiderind",
+      "desc": "mit hausgemachter Kräuterbutter",
+      "price": "35,60 €"
+     }
+    ]
+   },
+   {
+    "title": "Beilagen zur Auswahl",
+    "short": "Beilagen",
+    "keywords": [
+     "beilage",
+     "spaetzle",
+     "bratkartoffel",
+     "kartoffelsalat",
+     "pommes"
+    ],
+    "items": [
+     {
+      "name": "Bratkartoffel",
+      "desc": "",
+      "price": "5,90 €"
+     },
+     {
+      "name": "Kartoffelsalat",
+      "desc": "",
+      "price": "4,50 €"
+     },
+     {
+      "name": "Gemischter Salat",
+      "desc": "",
+      "price": "7,80 €"
+     },
+     {
+      "name": "Gemüse",
+      "desc": "",
+      "price": "7,80 €"
+     },
+     {
+      "name": "Spätzle mit Soße",
+      "desc": "",
+      "price": "5,90 €"
+     },
+     {
+      "name": "Bauernbrot",
+      "desc": "",
+      "price": "2,00 €"
+     }
+    ]
+   },
+   {
+    "title": "Allgäuer Wild",
+    "short": "Wild",
+    "keywords": [
+     "wild",
+     "hirsch",
+     "gulasch",
+     "jaeger"
+    ],
+    "items": [
+     {
+      "name": "Jägerteller nach Oma Eckers Rezept",
+      "desc": "Hirschgulasch vom Schlegel mit hausgemachten Spätzle, Blaukraut und Preiselbeeren",
+      "price": "29,50 €"
+     }
+    ]
+   },
+   {
+    "title": "Frischer Fisch",
+    "short": "Fisch",
+    "keywords": [
+     "fisch",
+     "forelle"
+    ],
+    "items": [
+     {
+      "name": "Im Papier gebackene Allgäuer Bachforellenfilets",
+      "desc": "mit Blattspinat, Strauchtomaten, Fetakäse und Salzkartoffeln",
+      "price": "29,50 €"
+     }
+    ]
+   },
+   {
+    "title": "Dessert – Süßes",
+    "short": "Dessert",
+    "keywords": [
+     "dessert",
+     "nachtisch",
+     "nachspeise",
+     "suesses",
+     "suess",
+     "eis",
+     "kuchen",
+     "strudel"
+    ],
+    "items": [
+     {
+      "name": "Rahmapfelstrudel mit Vanillesoße",
+      "desc": "",
+      "price": "7,80 €"
+     },
+     {
+      "name": "Hausgemachter Schoko-Guglhupf mit frischen Himbeeren",
+      "desc": "",
+      "price": "10,90 €"
+     },
+     {
+      "name": "Hausmacher-Walnusseis mit heißen Zimt-Honigkirschen",
+      "desc": "",
+      "price": "8,90 €"
+     },
+     {
+      "name": "Apfelküchle in Zimt-Zucker mit Hausmacher-Vanilleeis",
+      "desc": "",
+      "price": "8,90 €"
+     },
+     {
+      "name": "Espresso mit Landzunge-Vanilleeis",
+      "desc": "",
+      "price": "5,90 €"
+     },
+     {
+      "name": "Gemischtes Landzunge-Eis",
+      "desc": "",
+      "price": "7,80 €"
+     }
+    ]
+   },
+   {
+    "title": "Kaffee",
+    "short": "Kaffee",
+    "keywords": [
+     "kaffee",
+     "espresso",
+     "cappuccino",
+     "latte"
+    ],
+    "items": [
+     {
+      "name": "Café crème",
+      "desc": "",
+      "price": "4,00 €"
+     },
+     {
+      "name": "Cappuccino",
+      "desc": "",
+      "price": "4,50 €"
+     },
+     {
+      "name": "Latte macchiato",
+      "desc": "",
+      "price": "4,50 €"
+     },
+     {
+      "name": "Milchkaffee",
+      "desc": "",
+      "price": "4,60 €"
+     },
+     {
+      "name": "Espresso",
+      "desc": "",
+      "price": "2,70 €"
+     },
+     {
+      "name": "Kleiner Italiener",
+      "desc": "",
+      "price": "4,80 €"
+     }
+    ]
+   },
+   {
+    "title": "Eiles Tee",
+    "short": "Tee",
+    "keywords": [
+     "tee"
+    ],
+    "items": [
+     {
+      "name": "Darjeeling First Flush, Kamillenblüten, Kräutergarten, Sommerbeeren oder Pfefferminzblätter",
+      "desc": "",
+      "price": "4,20 €"
+     }
+    ]
+   },
+   {
+    "title": "Offene Weine weiß · 0,2 l",
+    "short": "Weißwein offen",
+    "keywords": [
+     "weisswein",
+     "offener wein",
+     "offene weine",
+     "glas wein",
+     "schoppen"
+    ],
+    "items": [
+     {
+      "name": "Karl Pfaffmann – Grauer Burgunder",
+      "desc": "mineralisch, dezente Säure",
+      "price": "8,20 €"
+     },
+     {
+      "name": "Hagnauer Weißburgunder",
+      "desc": "feines Aroma, saftige Frische",
+      "price": "8,30 €"
+     },
+     {
+      "name": "Deidesheimer Herrgottsacker – Riesling",
+      "desc": "gehaltvoll, saftig, nach Mirabelle",
+      "price": "7,60 €"
+     },
+     {
+      "name": "Bassermann-Jordan, Pfalz – Sauvignon Blanc",
+      "desc": "feinsinnig, gut balanciert",
+      "price": "8,30 €"
+     },
+     {
+      "name": "Bernhard Ott, Wagram – Grüner Veltliner",
+      "desc": "kräutrig, würzig",
+      "price": "8,80 €"
+     },
+     {
+      "name": "Kress, Bodensee – halbtrocken",
+      "desc": "verspielt fruchtig",
+      "price": "8,50 €"
+     }
+    ]
+   },
+   {
+    "title": "Offene Weine rot · 0,2 l",
+    "short": "Rotwein offen",
+    "keywords": [
+     "rotwein"
+    ],
+    "items": [
+     {
+      "name": "Kress Bodensee Spätburgunder",
+      "desc": "rund und harmonisch, feines Säurespiel",
+      "price": "8,30 €"
+     },
+     {
+      "name": "Neprica – Primitivo IGT, Apulien",
+      "desc": "weich, frisch und würzig",
+      "price": "8,20 €"
+     },
+     {
+      "name": "Mas Rabell Tinto, Katalanien",
+      "desc": "harmonisch, nach roten Beeren",
+      "price": "8,20 €"
+     },
+     {
+      "name": "Zweigelt „Keringer“, Neusiedlersee",
+      "desc": "samtig, mild mit feinen Tanninen",
+      "price": "8,30 €"
+     }
+    ]
+   },
+   {
+    "title": "Offene Weine rosé · 0,2 l",
+    "short": "Rosé",
+    "keywords": [
+     "rose",
+     "rosewein"
+    ],
+    "items": [
+     {
+      "name": "Durbacher Spätburgunder Weißherbst",
+      "desc": "halbtrocken, blumig",
+      "price": "7,20 €"
+     },
+     {
+      "name": "Côtes de Provence",
+      "desc": "frisch und fruchtig",
+      "price": "7,20 €"
+     }
+    ]
+   },
+   {
+    "title": "Deutsche Flaschenweine weiß",
+    "short": "Flasche weiß DE",
+    "keywords": [
+     "flasche weiss",
+     "flaschenwein weiss",
+     "deutsche flaschenweine"
+    ],
+    "items": [
+     {
+      "name": "Aufricht, Bodensee – Sauvignon Blanc",
+      "desc": "betörend aromatisch, nach Stachelbeer und Holunder",
+      "price": "39,80 €"
+     },
+     {
+      "name": "Aufricht’s Seegucker rosé",
+      "desc": "trockener Rotling, nach Muskat und Flieder",
+      "price": "31,90 €"
+     },
+     {
+      "name": "Gut Hermannsberg – Riesling 7 Terroirs, Nahe",
+      "desc": "saftig, frisch, nach Grapefruit und Quitte",
+      "price": "36,90 €"
+     },
+     {
+      "name": "Klumpp – Hand in Hand – Grauburgunder, Baden",
+      "desc": "kräftig, fruchtig mit Kräuteraromen",
+      "price": "31,90 €"
+     },
+     {
+      "name": "J&P Bründlmayer – Alte Schule – Weißburgunder und Chardonnay, Niederösterreich",
+      "desc": "mineralisch und anhaftend mit langem Abgang",
+      "price": "36,90 €"
+     },
+     {
+      "name": "Pfaffmann – Pauline – Grauburgunder, Pfalz",
+      "desc": "geradlinig, verführerisch saftig",
+      "price": "39,90 €"
+     },
+     {
+      "name": "Bamberger – Weißer Merlot, Nahe",
+      "desc": "Blanc de Noir mit feiner Aromenfülle",
+      "price": "28,90 €"
+     }
+    ]
+   },
+   {
+    "title": "Ausländische Flaschenweine weiß",
+    "short": "Flasche weiß Ausland",
+    "keywords": [
+     "auslaendische",
+     "italien",
+     "suedtirol",
+     "wachau"
+    ],
+    "items": [
+     {
+      "name": "Lageder Chardonnay DOC, Südtirol",
+      "desc": "Aroma von Südfrüchten, ausgewogener Körper",
+      "price": "33,90 €"
+     },
+     {
+      "name": "Lugana Bulgarini DOC, Venetien",
+      "desc": "fruchtig, frisch, komplex und geschmeidig",
+      "price": "35,90 €"
+     },
+     {
+      "name": "Villa Antinori – Pinot Bianco DOC, Toskana",
+      "desc": "floral mit exotischer Frucht",
+      "price": "37,90 €"
+     },
+     {
+      "name": "FX Pichler – Veltliner DAC Klostersatz, Wachau",
+      "desc": "saftig elegant mit feiner Mineralik",
+      "price": "52,90 €"
+     }
+    ]
+   },
+   {
+    "title": "Flaschenweine rot",
+    "short": "Flasche rot",
+    "keywords": [
+     "flasche rot",
+     "flaschenwein rot",
+     "rote flasche"
+    ],
+    "items": [
+     {
+      "name": "Solveig’s Pinot Noir, Rheingau",
+      "desc": "gehaltvoll mit dezentem Barriquecharakter",
+      "price": "59,90 €"
+     },
+     {
+      "name": "Hannes Reeh – Rohstoff – Zweigelt, Burgenland",
+      "desc": "intensiv mit samtigen Tanninen und langem Abgang",
+      "price": "45,90 €"
+     },
+     {
+      "name": "Markus Schneider’s Black Print, Pfalz",
+      "desc": "Cuvée, kraftvoll und vielschichtig",
+      "price": "39,90 €"
+     },
+     {
+      "name": "Gaja – Promis Ca’Marcanda IGT, Toskana",
+      "desc": "Cuvée aus Syrah, Merlot, Sangiovese, komplex und dicht, besonders ausgewogen",
+      "price": "78,90 €"
+     },
+     {
+      "name": "Insoglio del Cinghiale IGT, Toskana",
+      "desc": "saftig, lustvoll, einladend nach reifen Früchten",
+      "price": "69,00 €"
+     },
+     {
+      "name": "Clio, Bodegas El Nido – DOP Jumilla",
+      "desc": "Cuvée aus Cabernet und Monastrell",
+      "price": "72,90 €"
+     },
+     {
+      "name": "Aalto – Ribera del Duero – Tinto Fino",
+      "desc": "perfekt balanciert, mit langem Abgang",
+      "price": "77,90 €"
+     },
+     {
+      "name": "Luis Cañas Reserva – Rioja – Tempranillo D.O.Ca.",
+      "desc": "kräftig, fruchtig und elegant, aus dem Barrique",
+      "price": "38,90 €"
+     }
+    ]
+   }
+  ]
+ },
+ "fallback": {
+  "text": "Das kann ich leider nicht sicher beantworten – ich kenne nur die Inhalte dieser Website. Am besten rufen Sie uns an: **08386 7193** (ab 15 Uhr).",
+  "links": [
+   {
+    "label": "08386 7193 anrufen",
+    "href": "tel:+4983867193"
+   }
+  ]
+ }
+}

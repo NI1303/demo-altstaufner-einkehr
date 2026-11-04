@@ -1,0 +1,9 @@
+@font-face{font-family:'Caslon Display';src:url(../fonts/libre-caslon-display-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Caslon';src:url(../fonts/libre-caslon-text-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Caslon';src:url(../fonts/libre-caslon-text-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Caslon';src:url(../fonts/libre-caslon-text-latin-700-normal.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Fell';src:url(../fonts/im-fell-english-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Fell';src:url(../fonts/im-fell-english-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Fell SC';src:url(../fonts/im-fell-english-sc-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted';src:url(../fonts/schibsted-grotesk-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted';src:url(../fonts/schibsted-grotesk-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
