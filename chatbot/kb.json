@@ -1391,5 +1391,10 @@
     "href": "tel:+4983867193"
    }
   ]
+ },
+ "handoff": {
+  "text": "Lieber persönlich? Ab 15 Uhr erreichbar:",
+  "tel": "+4983867193",
+  "telLabel": "08386 7193 anrufen"
  }
 }

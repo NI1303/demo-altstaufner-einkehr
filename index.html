@@ -7,16 +7,14 @@
 <title>Altstaufner Einkehr – Wirtshaus im denkmalgeschützten Haus, Oberstaufen (Demo)</title>
 <meta name="description" content="Die Altstaufner Einkehr in Oberstaufen: bodenständige und niveauvolle Küche aus Bayern und dem Allgäu im denkmalgeschützten Haus. Regionale Bio-Produkte, Mitglied der Landzunge. Di–Sa ab 17 Uhr.">
 <meta name="theme-color" content="#f4ead6">
-<meta property="og:title" content="Altstaufner Einkehr – Oberstaufen">
-<meta property="og:image" content="img/home.webp">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="img/logo.png">
 <link rel="preload" as="font" type="font/woff2" href="fonts/libre-caslon-display-latin-400-normal.woff2" crossorigin>
 <link rel="preload" as="image" href="img/home-800.webp">
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="chatbot/chatbot.css">
-<link rel="stylesheet" href="css/premium.css">
-<!--liebe--><link rel="stylesheet" href="css/liebe.css"><link rel="stylesheet" href="css/liebe-site.css"><!--/liebe-->
+<!--plus--><link rel="preload" href="fonts/libre-caslon-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><!--/plus-->
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="chatbot/chatbot.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="chatbot/chatbot.css"></noscript>
+<!--liebe--><!--/liebe-->
 
 <script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('demo-intro'))document.documentElement.classList.add('intro-on')}catch(e){}</script>
 
@@ -28,6 +26,8 @@
 "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"24:00"}],
 "acceptsReservations":"True"}
 </script>
+<!--plus--><meta property="og:type" content="website"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="Altstaufner Einkehr"><meta property="og:title" content="Altstaufner Einkehr – Wirtshaus im denkmalgeschützten Haus, Oberstaufen (Demo)"><meta property="og:description" content="Die Altstaufner Einkehr in Oberstaufen: bodenständige und niveauvolle Küche aus Bayern und dem Allgäu im denkmalgeschützten Haus. Regionale Bio-Produkte, Mitglied der Landzunge. Di–Sa ab 17 Uhr."><meta property="og:url" content="https://ni1303.github.io/demo-altstaufner-einkehr/"><meta property="og:image" content="https://ni1303.github.io/demo-altstaufner-einkehr/img/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Altstaufner Einkehr – Wirtshaus im denkmalgeschützten Haus in Oberstaufen (Demo-Entwurf)"><meta name="twitter:card" content="summary_large_image"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><meta name="theme-color" content="#3a1512"><link rel="stylesheet" href="css/plus.css" media="print" onload="this.media='all'"><noscript></noscript><!--/plus-->
+<!--plus--><style>.pl-vn-btn{margin-left:.7rem;padding:.25rem .7rem;border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:.92em;font-weight:600;cursor:pointer;white-space:nowrap}</style><!--/plus-->
 </head>
 <body data-fx>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -41,7 +41,7 @@
   <button class="intro-skip" type="button">Überspringen</button>
 </div>
 <div class="folio-ind" data-chapter-ind aria-hidden="true"><span class="fi-no">Kapitel <b data-ch-no>I</b></span><span class="fi-l" data-ch-label>Das Haus</span><span class="fi-bar"></span></div>
-<div class="demo-banner" role="note"><strong>Entwurf · Demo-Version</strong> für ein Redesign-Angebot – keine offizielle Seite der Altstaufner Einkehr. Formulare senden nichts.</div>
+<div class="demo-banner" role="note"><strong>Entwurf · Demo-Version</strong> für ein Redesign-Angebot – keine offizielle Seite der Altstaufner Einkehr. Formulare senden nichts.<!--plus--><button type="button" class="pl-vn-btn" aria-haspopup="dialog"><span aria-hidden="true">◐</span> Vorher / Nachher</button><!--/plus--></div>
 
 <header class="mast" id="top">
   <a class="mast-brand" href="#top" aria-label="Altstaufner Einkehr – zum Seitenanfang">
@@ -113,7 +113,7 @@
   <div class="story-grid">
     <div class="story-media" aria-hidden="true">
       <div class="story-frame">
-        <img data-scene class="active" src="img/home-800.webp" alt="" width="800" height="500" loading="lazy">
+        <img fetchpriority="high" data-scene class="active" src="img/home-800.webp" alt="" width="800" height="500">
         <img data-scene src="img/restaurant-800.webp" alt="" width="800" height="500" loading="lazy">
         <img data-scene src="img/hauptspeisen-800.webp" alt="" width="800" height="500" loading="lazy">
         <img data-scene src="img/kontakt-800.webp" alt="" width="800" height="500" loading="lazy">
@@ -437,5 +437,6 @@
 <script src="js/premium.js" defer></script>
 <script src="chatbot/chatbot.js" data-kb="chatbot/kb.json" defer></script>
 <!--liebe--><script type="application/json" id="liebe-cfg">{"underline": [{"sel": ".story-head h2, #umland-h, .saison h2, .karte h2, .reserve-text h2, .anfahrt-text h2", "style": "scribble"}], "notes": [{"at": ".story-head", "text": "steht unter Denkmalschutz!", "arrow": "dl", "rot": -4, "css": {"right": "4%", "top": "-.4rem"}}, {"at": ".reserve-text .big-phone", "text": "am Telefon ab 15&nbsp;Uhr", "arrow": "dl", "m": "inline", "rot": -5, "css": {"left": "16.5rem", "top": "-1.5rem"}}, {"at": ".anfahrt-text .addr", "text": "nur ein paar Schritte vom Bahnhof", "arrow": "dl", "m": "inline", "rot": -3, "css": {"left": "12rem", "top": "-.6rem"}}], "frames": [{"sel": ".strip-track figure > a, .reserve-photo", "kind": "corners"}], "lift": ".strip-track figure", "squish": ".cta, .nav-cta, .mobile-bar a", "burst": {"sel": ".cta, .nav-cta, a[href^='tel:'], .mobile-bar a", "shape": "heart", "colors": ["#8a2a1b", "#e4ab92", "#c46b4f"], "n": 7}, "egg": {"at": ".kolophon", "type": "bookmark", "label": "Lesezeichen einlegen", "hint": "Lesezeichen einlegen", "svg": "<svg width='38' height='80' viewBox='0 0 30 62' aria-hidden='true'><path d='M3 0h24v58L15 48 3 58z' fill='#e4ab92'/><path d='M7 6v38M23 6v38' stroke='#b9786a' stroke-width='1' stroke-dasharray='2 3'/><\/svg>", "msg": "Lesezeichen gesetzt – wir freuen uns auf das nächste Kapitel mit Ihnen!", "css": {"top": "-1.6rem", "right": "-1rem"}}, "foot": {"at": ".foot", "after": ".kolophon", "text": "Schön, dass Sie bis zur letzten Seite geblättert haben.", "top": "Zurück zum Titelblatt", "shape": "heart"}, "texture": "paper"}</script><script src="js/liebe.js" defer></script><!--/liebe-->
+<!--plus--><script type="application/json" id="plus-cfg">{"address": "Altstaufner Einkehr, Bahnhofstraße 4, 87534 Oberstaufen", "vorher": {"d": "img/demo/vorher-d.webp", "m": "img/demo/vorher-m.webp", "nd": "img/demo/nachher-d.webp", "nm": "img/demo/nachher-m.webp", "src": "Bisher: Startseite altstaufnereinkehr.de, Bildschirmfoto vom 29.10.2026. Dieser Hinweis ist nur Teil der Demo und verschwindet mit dem Demo-Banner."}}</script><script src="js/plus.js" defer></script><!--/plus-->
 </body>
 </html>
