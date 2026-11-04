@@ -1,0 +1,22 @@
+/* Altstaufner Einkehr – liebevolle Details (Chronik & Speisebuch). Wird von liebe_inject.py nicht überschrieben. */
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/caveat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/caveat-latin-700-normal.woff2) format('woff2')}
+:root{--lv-hand:'Caveat',cursive;--lv-ink:#8a2a1b;--lv-ul:var(--red,#8a2a1b);--lv-tex-o:.42;--lv-corner:#1e1813;--lv-c-off:7px;--lv-note-fs:1.5rem;--lv-ul-w:230px}
+.karte{--lv-ink:#e4ab92}
+.saison{--lv-ul:#d9a48f}
+.lv-c{width:22px;height:22px;opacity:.82}
+.strip-track figure.lv-lift{transition:translate .45s var(--lv-ease),rotate .45s var(--lv-ease)}
+.strip-track figure:nth-child(odd):hover{rotate:-.6deg}
+.strip-track figure:nth-child(even):hover{rotate:.6deg}
+/* Lesezeichen im Kolophon */
+.lv-egg-bookmark{flex-direction:row-reverse;align-items:flex-start;--lv-egg-ink:#f3e7d0;--lv-egg-fs:1.35rem}
+.lv-egg-bookmark .lv-egg-btn svg{transform-origin:50% 0;transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
+.lv-egg-bookmark.lv-egg-on .lv-egg-btn svg{transform:scaleY(1.35)}
+.lv-egg-bookmark .lv-egg-msg{margin-top:1.4rem;text-align:right;max-width:13rem}
+.kolophon{position:relative}
+/* Fußzeile */
+.foot .lv-foot{--lv-foot-heart:#e4ab92;--lv-foot-ink:#f3e7d0;max-width:60rem;margin:2rem auto 1.4rem}
+@media (max-width:899px){.lv-egg-bookmark{position:static;margin:1rem 0 0;flex-direction:row;justify-content:center}.lv-egg-bookmark .lv-egg-msg{text-align:left;margin-top:.6rem}.lv-note-m{color:var(--lv-ink)}}
+/* 404 */
+.lv-404{--lv-404-bg:#f4ead6;--lv-404-ink:#1e1813;--lv-404-accent:#8a2a1b;--lv-404-font:'Caslon',Georgia,serif;--lv-404-display:'Caslon Display','Caslon',Georgia,serif;--lv-404-r:2px;--lv-404-hw:400}
+.lv-404-art{color:#8a2a1b}

@@ -16,7 +16,7 @@
   "font": "Schibsted, system-ui, sans-serif",
   "serif": "Fell, Georgia, serif"
  },
- "greeting": "Grüß Gott! Ich bin der Demo-Assistent der Altstaufner Einkehr. Ich beantworte Fragen zu Öffnungszeiten, Reservierung, Speisekarte und Anfahrt.\n\n{{status}}",
+ "greeting": "Grüß Gott in der Stube – schön, dass Sie reinschauen! Ich bin der kleine Demo-Assistent der Altstaufner Einkehr und helfe Ihnen gern bei Öffnungszeiten, Reservierung, Speisekarte und dem Weg zu uns.\n\n{{status}}",
  "chips": [
   {
    "label": "Öffnungszeiten"
@@ -379,7 +379,18 @@
     "strasse",
     "fussgaengerzone",
     "zentrum",
-    "ortskern"
+    "ortskern",
+    "wo finde",
+    "finde ich",
+    "wo finden",
+    "wo seid ihr",
+    "wo genau",
+    "wie kommt man",
+    "komme ich hin",
+    "hinfahren",
+    "wegbeschreibung",
+    "standort",
+    "anschrift"
    ],
    "answer": "**So finden Sie zu uns**\nRestaurant Altstaufner Einkehr\nBahnhofstraße 4, 87534 Oberstaufen\n\nWir liegen im ruhigen Ortskern Oberstaufens, günstig in der **Fußgängerzone, unweit des Bahnhofs**.\n\nZu Parkmöglichkeiten steht auf der Website nichts – fragen Sie gerne telefonisch nach.",
    "links": [
